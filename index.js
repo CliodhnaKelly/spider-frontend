@@ -3,9 +3,9 @@ $(document).ready(function() {
     console.log(e)
     e.preventDefault();
     $.ajax({
-      type: "POST",
-      data: 'json',
-      url: 'https://localhost:5000/search?keyword=apple',
+      type: "GET",
+      // data: 'json',
+      url: 'https://localhost:8080/search?keyword=quiz',
       success: function(result) {
         console.log(result)
         $( ".city-name" ).text(result.name);
